@@ -41,7 +41,7 @@
 ### 开发环境
 
 * os: Windows 10  
-- IDE: Keil uVision4
+- IDE: Code Composer Studio 9.3.0
 
 ### 开发工具
 
