@@ -51,7 +51,7 @@
 * os: Windows 10
 - package: CC3200SDK v1.5.0
 * IDE: Code Composer Studio 9.3.0
-- Interpreter: Python3
+- Interpreter: Python 3.7
 * IDE: Pycharm
 
 ### 开发工具
