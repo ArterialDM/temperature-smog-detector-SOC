@@ -116,7 +116,7 @@ SOC通过POST方式把新检测到的温度信息发送到服务器
 
 ###### 接口
 
-    http://localhost/getInfo GET
+    http://localhost/getDegree GET
     
 ###### JSON数组结构
 
