@@ -107,7 +107,7 @@
     
     {
       "degree":"",
-      "timestamp":""
+      "time":""
     }
 
 SOC通过POST方式把新检测到的温度信息发送到服务器
