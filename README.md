@@ -98,7 +98,8 @@
 * OS: Windows 10
 - Interpreter: Python 3.7
 * IDE: Pycharm
-- Framework: bottle
+- Framework: Bottle
+* Database: MySql 8.0
 
 #### http接口
 
