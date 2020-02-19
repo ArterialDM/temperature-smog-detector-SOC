@@ -46,14 +46,6 @@
 * 采集烟雾物理信号
 - 设计个人电脑可视化软件
 
-### 开发环境
-
-* os: Windows 10
-- package: CC3200SDK v1.5.0
-* IDE: Code Composer Studio 9.3.0
-- Interpreter: Python 3.7
-* IDE: Pycharm
-
 ### 开发工具
 
 * CC3200 DEMO BOARD
@@ -93,7 +85,20 @@
 
 ### 嵌入式程序
 
+#### 开发环境
+
+* OS: Windows 10
+- SDK: CC3200SDK v1.5.0
+* IDE: Code Composer Studio 9.3.0
+
 ### 服务器程序
+
+#### 开发环境
+
+* OS: Windows 10
+- Interpreter: Python 3.7
+* IDE: Pycharm
+- Framework: bottle
 
 #### http接口
 
@@ -101,7 +106,7 @@
 
 ###### 接口
 
-    http://localhost/addInfo GET
+    http://localhost/addInfo/<info_json> GET
     
 ###### JSON结构
     
@@ -109,7 +114,7 @@
       "degree":""
     }
 
-SOC通过POST方式把新检测到的温度信息发送到服务器
+SOC通过GET方式把新检测到的温度信息发送到服务器
 
 ##### 获取信息
 
@@ -136,29 +141,15 @@ SOC通过POST方式把新检测到的温度信息发送到服务器
 
 #### 数据库表结构
 
-
-
-
-
-
-
 ##### 温度信息表
 
-    create table student
+    create table info
     (
-      count int auto_increment,
-      studentID varchar(45) null,
-      college varchar(45) null,
-      bedID varchar(45) null,
-      name varchar(45) null,
-      date1 varchar(45) null,
-      date2 varchar(45) null,
-      live boolean null,
-      politics varchar(45) null,
-      sex varchar(45) null,
-      `desc` varchar(300) null,
-      constraint student_pk
-        primary key (count)
+	   count int auto_increment,
+	   degree float null,
+	   time timestamp default now() null,
+	   constraint info_pk
+		  primary key (count)
     );
     
 每条从单片机上传来的温度信息对应产生表的一条记录。
@@ -166,11 +157,11 @@ SOC通过POST方式把新检测到的温度信息发送到服务器
 
 ### 手机端程序
 
+#### 开发环境
 
-
-
-
-
+* OS: macOS Catalina 10.15.3
+- SDK: SwiftUI
+* IDE: Xcode 11.3.1
 
 ## 总结
 
@@ -181,7 +172,7 @@ SOC通过POST方式把新检测到的温度信息发送到服务器
 
 ### 不足
 
-
+* 单片机的网络资源利用率低，因为目前单片机只能一次向服务器发送一条温度记录信息，但是因为开发需求对发送信息频率有一定要求，所以单片机会占用大量网络资源来反复处理TCP请求
 
 ### 困难
 
