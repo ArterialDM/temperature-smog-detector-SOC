@@ -101,7 +101,7 @@
 
 ###### 接口
 
-    http://localhost/addInfo POST
+    http://localhost/addInfo GET
     
 ###### JSON结构
     
