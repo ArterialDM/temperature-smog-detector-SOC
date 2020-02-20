@@ -150,7 +150,7 @@ SOC通过GET方式把新检测到的温度信息发送到服务器
 	   degree float null,
 	   time timestamp default now() null,
 	   constraint info_pk
-             primary key (count)
+         primary key (count)
     );
     
 每条从单片机上传来的温度信息对应产生表的一条记录。
